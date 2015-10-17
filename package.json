@@ -1,8 +1,45 @@
 {
   "name": "electrkyll",
-  "version": "0.1.0",
-  "main": "main.js",
+  "productName": "Electrkyll",
+  "version": "0.0.0",
+  "description": "My awesome app",
+  "license": "MIT",
+  "repository": "pmarsceill/electrkyll",
+  "author": {
+    "name": "Patrick Marsceill",
+    "email": "pmarsceill@github.com",
+    "url": "patrickmarsceill.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "electronVersion": "0.34.0",
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.2.1"
+  },
   "devDependencies": {
-    "electron-prebuilt": "^0.34.0"
+    "electron-packager": "^5.0.0",
+    "electron-prebuilt": "^0.34.0",
+    "xo": "^0.9.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
   }
 }
