@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Electrkyll</title>
+		<link rel="stylesheet" href="css/index.css">
+    <script>
+    	document.addEventListener("keydown", function (e) {
+    		if (e.which === 123) {
+    			require('remote').getCurrentWindow().toggleDevTools();
+    		} else if (e.which === 116) {
+    			location.reload();
+    		}
+    	});
+    </script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Electrkyll</h1>
+			</header>
+			<section class="main">
+			  <button id="generate">Generate</button>
+			</section>
+			<footer></footer>
+		</div>
+    <script>
+    var generateBtn = document.getElementById('generate');
+    var path = `${__dirname}` + "/tmp/test";
+    alert(path);
+    generateBtn.onclick = generateSite;
+    function generateSite() {
+      var remote = require('remote');
+      var fs = remote.require('fs');
+
+      fs.writeFile("/Users/pmarsceill/_projects/electrkyll/tmp/test", "Hey There!", function(err) {
+        if(err) {
+            return console.log(err);
+        }
+
+        alert("The file was saved!");
+      })
+    }
+    </script>
+	</body>
+</html>
