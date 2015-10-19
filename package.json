@@ -2,7 +2,7 @@
   "name": "electrkyll",
   "productName": "Electrkyll",
   "version": "0.0.1",
-  "description": "My awesome app",
+  "description": "An electron powered jekyll-like static site generator",
   "license": "MIT",
   "repository": "pmarsceill/electrkyll",
   "author": {

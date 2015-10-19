@@ -1,6 +1,6 @@
 # electrkyll
 
-> An electron powered Jekyll app
+> An electron powered jekyll-like static site generator
 
 
 ## Dev
